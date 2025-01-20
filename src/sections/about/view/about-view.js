@@ -2,7 +2,7 @@ import AboutHero from '../about-hero';
 import AboutWhat from '../about-what';
 import AboutTeam from '../about-team';
 import AboutVision from '../about-vision';
-import AboutTestimonials from '../about-testimonials';
+import AboutApart from '../about-Apart';
 
 // ----------------------------------------------------------------------
 
@@ -15,9 +15,8 @@ export default function AboutView() {
 
       <AboutVision />
 
-      <AboutTeam />
+      <AboutApart/>
 
-      <AboutTestimonials />
     </>
   );
 }
