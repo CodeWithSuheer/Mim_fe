@@ -21,7 +21,7 @@ export default function AboutHero() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundImage:
-          'url(/assets/background/overlay_1.svg), url(/assets/images/about/hero.jpg)',
+          'url(/assets/images/about/hero.png)',
       }}
     >
       <Container component={MotionContainer}>
@@ -35,28 +35,8 @@ export default function AboutHero() {
             },
           }}
         >
-          <TextAnimate text="Who" variants={varFade().inRight} sx={{ color: 'primary.main' }} />
-
-          <br />
-
-          <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
-            <TextAnimate text="we" />
-            <TextAnimate text="are?" />
-          </Stack>
-
-          <m.div variants={varFade().inRight}>
-            <Typography
-              variant="h4"
-              sx={{
-                mt: 3,
-                color: 'common.white',
-                fontWeight: 'fontWeightSemiBold',
-              }}
-            >
-              Let&apos;s work together and
-              <br /> make awesome site easily
-            </Typography>
-          </m.div>
+         
+       
         </Box>
       </Container>
     </Box>

@@ -11,10 +11,8 @@ import LinearProgress from '@mui/material/LinearProgress';
 // hooks
 import { useResponsive } from 'src/hooks/use-responsive';
 // utils
-import { fPercent } from 'src/utils/format-number';
 // components
 import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
@@ -28,106 +26,132 @@ export const SKILLS = [...Array(3)].map((_, index) => ({
 
 export default function AboutWhat() {
   const theme = useTheme();
-
   const mdUp = useResponsive('up', 'md');
-
-  const isLight = theme.palette.mode === 'light';
-
-  const shadow = `-40px 40px 80px ${alpha(
-    isLight ? theme.palette.grey[500] : theme.palette.common.black,
-    0.24
-  )}`;
 
   return (
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 10, md: 15 },
-        textAlign: { xs: 'center', md: 'unset' },
+        py: { xs: 8, md: 10 },
       }}
     >
-      <Grid container columnSpacing={{ md: 3 }} alignItems="flex-start">
-        {mdUp && (
-          <Grid container xs={12} md={6} lg={7} alignItems="center" sx={{ pr: { md: 7 } }}>
-            <Grid xs={6}>
-              <m.div variants={varFade().inUp}>
-                <Image
-                  alt="our office 2"
-                  src="/assets/images/about/what_2.png"
-                  ratio="1/1"
-                  sx={{ borderRadius: 3, boxShadow: shadow }}
-                />
-              </m.div>
-            </Grid>
+      <m.div variants={varFade().inUp}>
+        <Typography 
+          variant="h1" 
+          align="center" 
+          color={'#A70E16'}
+          sx={{ 
+            mb: 3,
+            fontSize: { xs: '2.3rem', md: '3.3rem' },
+            position: 'relative',
+            display: 'inline-block',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: -8,
+              left: 0,
+              width: '100%',
+              height: '3px',
+              backgroundColor: '#A70E16',
+            },
+          }}
+        >
+          About Us
+        </Typography>
+      </m.div>
 
-            <Grid xs={6}>
-              <m.div variants={varFade().inUp}>
-                <Image
-                  alt="our office 1"
-                  src="/assets/images/about/what_1.png"
-                  ratio="3/4"
-                  sx={{ borderRadius: 3, boxShadow: shadow }}
-                />
-              </m.div>
-            </Grid>
-          </Grid>
-        )}
+      <m.div variants={varFade().inUp}>
+        <Typography
+          align="center"
+          sx={{
+            mb: 8,
+            mx: 'auto',
+            fontSize: { xs: '1rem', md: '1.1rem' },
+            lineHeight: 1.8,
+          }}
+        >
+          At MIM Transport Group, we're not just another trucking company. We're a family that's committed to helping owner-operators succeed. Founded in 2013, our mission has always been to provide a trustworthy and supportive environment where you can focus on what you do best—driving and delivering.
+        </Typography>
+      </m.div>
 
-        <Grid xs={12} md={6} lg={5}>
+      <m.div variants={varFade().inUp}>
+        <Typography 
+          variant="h1" 
+          align="center" 
+        color={'#A70E16'}
+          sx={{ 
+            mb: 8,
+            fontSize: { xs: '2rem', md: '2.5rem' },
+            color: '#A70E16',
+            position: 'relative',
+            display: 'inline-block',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: -8,
+              left: 0,
+              width: '100%',
+              height: '3px',
+              backgroundColor: '#A70E16',
+            }
+          }}
+        >
+          Our Story
+        </Typography>
+      </m.div>
+
+      <Grid container spacing={4} alignItems="center">
+        <Grid xs={12} md={6}  sx={{ order: { xs: 2, md: 1 } }}>
+          <m.div variants={varFade().inLeft}>
+            <Stack spacing={3}>
+              <Typography paragraph>
+                MIM Transport Group was born out of a deep understanding of the challenges owner-operators face every day. Our founders, seasoned veterans in the trucking industry, recognized the need for a company that not only values professionalism but also fosters a culture of respect and fairness. Starting with just a small fleet and big dreams, we've grown into a nationally trusted partner for owner-operators across the country.
+              </Typography>
+              <Typography paragraph>
+                We understand that trucking isn't just a job—it's a lifestyle. That's why we've built a community where drivers feel valued and supported. From transparent communication and dependable pay to a team that's always just a call away, we've created a company that puts people first. At MIM Transport Group, you're not just a driver; you're family.
+              </Typography>
+            </Stack>
+          </m.div>
+        </Grid>
+
+        <Grid xs={12} md={6} sx={{ order: { xs: 1, md: 2 } }}>
           <m.div variants={varFade().inRight}>
-            <Typography variant="h2" sx={{ mb: 3 }}>
-              What is Minimal?
+            <Image
+              alt="MIM Transport Truck"
+              src="/assets/images/about/truck_1.png"
+              ratio="4/3"
+              sx={{ borderRadius: 2 }}
+            />
+          </m.div>
+        </Grid>
+
+        <Grid xs={12} md={6} sx={{ order: { xs: 4, md: 4 } }}>
+          <m.div variants={varFade().inLeft}>
+            <Typography paragraph sx={{lineHeight:'24px'}}>
+              We've always prioritized honesty and dependability. We understand the challenges of being an owner-operator, and that's why we've built our company on the values of transparency and support. Over the years, we've grown into a trusted partner for drivers across the country, offering steady opportunities and a team that truly cares about your success.
             </Typography>
           </m.div>
+        </Grid>
 
+        <Grid xs={12} md={6} sx={{ order: { xs: 3, md: 3 } }}>
           <m.div variants={varFade().inRight}>
-            <Typography
-              sx={{
-                color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
+            <Image
+              alt="MIM Transport Fleet"
+              src="/assets/images/about/truck_2.png"
+              sx={{ 
+                borderRadius: 2,
+                height: { xs: '200px', md: '300px' },
+                width: '100%',
+                objectFit: 'cover'
               }}
-            >
-              Our theme is the most advanced and user-friendly theme you will find on the market, we
-              have documentation and video to help set your site really easily, pre-installed demos
-              you can import in one click and everything from the theme options to page content can
-              be edited from the front-end. This is the theme you are looking for.
-            </Typography>
-          </m.div>
-
-          <Stack spacing={3} sx={{ my: 5 }}>
-            {SKILLS.map((progress, index) => (
-              <Box component={m.div} key={progress.label} variants={varFade().inRight}>
-                <Stack direction="row" alignItems="center" sx={{ mb: 1 }}>
-                  <Typography variant="subtitle2" sx={{ flexGrow: 1, textAlign: 'left' }}>
-                    {progress.label}
-                  </Typography>
-
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {fPercent(progress.value)}
-                  </Typography>
-                </Stack>
-
-                <LinearProgress
-                  color={(index === 0 && 'primary') || (index === 1 && 'warning') || 'error'}
-                  variant="determinate"
-                  value={progress.value}
-                />
-              </Box>
-            ))}
-          </Stack>
-
-          <m.div variants={varFade().inRight}>
-            <Button
-              variant="outlined"
-              color="inherit"
-              size="large"
-              endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}
-            >
-              Our Work
-            </Button>
+            />
           </m.div>
         </Grid>
       </Grid>
     </Container>
-    // </Box>
   );
 }
