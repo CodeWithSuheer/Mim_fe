@@ -66,18 +66,22 @@ export default function Header() {
           {mdUp && <NavDesktop offsetTop={offsetTop} data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            <Button variant="contained" target="_blank" rel="noopener" href={paths.minimalUI}>
-              Purchase Now
-            </Button>
+            {/* <Button
+              color="primary"
+              variant="contained"
+              sx={{ color: "#000", fontWeight: 500 }}
+            >
+              Login | Sign up
+            </Button> */}
 
             {mdUp && <LoginButton />}
 
-            <SettingsButton
+            {/* <SettingsButton
               sx={{
                 ml: { xs: 1, md: 0 },
                 mr: { md: 2 },
               }}
-            />
+            /> */}
 
             {!mdUp && <NavMobile offsetTop={offsetTop} data={navConfig} />}
           </Stack>

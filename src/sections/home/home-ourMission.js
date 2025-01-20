@@ -15,7 +15,6 @@ export default function OurMission() {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
                     padding: {
                         xs: '10% 0',
                         lg: '4% 0',
@@ -29,11 +28,15 @@ export default function OurMission() {
                 }}
             >
 
-                <Grid item xs={12} md={12}>
+                <Grid item xs={12} md={12} px={2}>
                     <m.span variants={varFade().inUp}>
-                        <Typography gutterBottom mb={10} variant="h2" fontWeight={800}
+                        <Typography gutterBottom variant="h2" fontWeight={800}
                             sx={{
                                 color: '#A70E16',
+                                marginBottom: {
+                                    xs: '1rem',
+                                    lg: '4rem'
+                                },
                                 textAlign: {
                                     xs: 'start',
                                     lg: 'center'
@@ -49,7 +52,7 @@ export default function OurMission() {
                     container
                     sx={{
                         margin: {
-                            xs: '2% 0',
+                            xs: '0% 0',
                             lg: '1% 0',
                         },
                         display: 'flex',
@@ -135,7 +138,7 @@ export default function OurMission() {
                     container
                     sx={{
                         margin: {
-                            xs: '2% 0',
+                            xs: '5% 0',
                             lg: '5% 0',
                         },
                         display: 'flex',
@@ -146,7 +149,7 @@ export default function OurMission() {
                         item
                         xs={11}
                         md={5}
-                        order={{ xs: 2, md: 2 }}
+                        order={{ xs: 1, md: 2 }}
                         display={'grid'}
                         justifyContent={'center'}
                         alignItems={'center'}
@@ -169,13 +172,13 @@ export default function OurMission() {
                         item
                         xs={12}
                         md={5}
-                        order={{ xs: 1, md: 1 }}
+                        order={{ xs: 2, md: 1 }}
                         sx={{
                             marginTop: {
                                 lg: '-2rem',
                                 md: '-2rem',
                                 sm: '2rem',
-                                xs: '2rem',
+                                xs: '1rem',
                             },
                         }}
                     >
@@ -307,7 +310,7 @@ export default function OurMission() {
                     container
                     sx={{
                         margin: {
-                            xs: '2% 0',
+                            xs: '5% 0',
                             lg: '5% 0',
                         },
                         display: 'flex',
@@ -318,7 +321,7 @@ export default function OurMission() {
                         item
                         xs={11}
                         md={5}
-                        order={{ xs: 2, md: 2 }}
+                        order={{ xs: 1, md: 2 }}
                         display={'grid'}
                         justifyContent={'center'}
                         alignItems={'center'}
@@ -341,7 +344,7 @@ export default function OurMission() {
                         item
                         xs={12}
                         md={5}
-                        order={{ xs: 1, md: 1 }}
+                        order={{ xs: 2, md: 1 }}
                         sx={{
                             marginTop: {
                                 lg: '-2rem',

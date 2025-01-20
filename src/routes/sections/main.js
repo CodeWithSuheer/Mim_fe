@@ -43,6 +43,7 @@ export const mainRoutes = [
       { path: 'about-us', element: <AboutPage /> },
       { path: 'contact-us', element: <ContactPage /> },
       { path: 'faqs', element: <FaqsPage /> },
+      { path: 'driver', element: <FaqsPage /> },
       {
         path: 'product',
         children: [

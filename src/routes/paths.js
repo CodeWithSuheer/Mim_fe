@@ -26,6 +26,7 @@ export const paths = {
   payment: '/payment',
   about: '/about-us',
   contact: '/contact-us',
+  driver: '/driver',
   faqs: '/faqs',
   page403: '/403',
   page404: '/404',

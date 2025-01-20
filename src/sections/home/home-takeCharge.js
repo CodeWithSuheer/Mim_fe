@@ -43,9 +43,9 @@ export default function TakeCharge() {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
                     padding: {
-                        lg: '4% 0',
+                        xs: '12% 0',
+                        lg: '3% 0',
                     },
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -59,9 +59,13 @@ export default function TakeCharge() {
 
                 <Grid item xs={12} md={12}>
                     <m.span variants={varFade().inUp}>
-                        <Typography gutterBottom mb={10} variant="h2" fontWeight={800}
+                        <Typography gutterBottom variant="h2" fontWeight={800}
                             sx={{
                                 color: '#fff',
+                                marginBottom: {
+                                    xs: '0.5rem',
+                                    lg: '5rem'
+                                },
                                 textAlign: {
                                     xs: 'start',
                                     lg: 'center'
@@ -74,7 +78,7 @@ export default function TakeCharge() {
 
                 <Grid
                     container
-                    spacing={4}
+                    spacing={{ xs: 1, lg: 4 }}
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',

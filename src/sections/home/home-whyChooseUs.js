@@ -70,8 +70,8 @@ export default function WhyChooseUs() {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
                     padding: {
+                        xs: '10% 0',
                         lg: '4% 0',
                     },
                     justifyContent: 'center',
@@ -85,9 +85,13 @@ export default function WhyChooseUs() {
             >
                 <Grid item xs={12} md={12}>
                     <m.span variants={varFade().inUp}>
-                        <Typography gutterBottom mb={10} variant="h2" fontWeight={800}
+                        <Typography gutterBottom variant="h2" fontWeight={800}
                             sx={{
                                 color: '#A70E16',
+                                marginBottom: {
+                                    xs: '2.5rem',
+                                    lg: '4rem'
+                                },
                                 textAlign: {
                                     xs: 'start',
                                     lg: 'center'
@@ -100,6 +104,7 @@ export default function WhyChooseUs() {
 
                 <Grid
                     container
+                    px={3}
                     spacing={3}
                     sx={{
                         display: 'flex',
@@ -121,6 +126,7 @@ export default function WhyChooseUs() {
                             }}
                         >
                             <Card
+                                mx={2}
                                 sx={{
                                     backgroundColor: "#FFFFFF",
                                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",

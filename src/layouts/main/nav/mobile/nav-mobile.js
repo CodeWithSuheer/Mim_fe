@@ -14,6 +14,8 @@ import SvgColor from 'src/components/svg-color';
 import Scrollbar from 'src/components/scrollbar';
 //
 import NavList from './nav-list';
+import { LoginButton } from 'src/layouts/_common';
+import { Box } from '@mui/system';
 
 // ----------------------------------------------------------------------
 
@@ -61,6 +63,10 @@ export default function NavMobile({ offsetTop, data }) {
               <NavList key={link.title} item={link} />
             ))}
           </List>
+
+          <Box sx={{ px: 2, mt: 2 }}>
+            <LoginButton />
+          </Box>
         </Scrollbar>
       </Drawer>
     </>

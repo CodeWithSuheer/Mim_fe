@@ -14,13 +14,13 @@ export default function TakeCharge() {
                 component={MotionViewport}
                 sx={{
                     display: 'flex',
-                    flexDirection: 'column',
-                    padding: {
-                        lg: '8% 0',
-                    },
-                    justifyContent: 'center',
+                    // minHeight: '100vh',
                     alignItems: 'center',
-                    backgroundImage: `url(/assets/background/readyToBg.png) `,
+                    padding: {
+                        xs: '13% 0',
+                        lg: '4% 0',
+                    },
+                    backgroundImage: `url(/assets/background/homebg.png)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -30,30 +30,26 @@ export default function TakeCharge() {
                     container
                     sx={{
                         margin: {
-                            xs: '10% 0',
-                            lg: '1% 0',
+                            lg: '7% 0',
+                            md: '8% 0',
+                            sm: '0% 0',
+                            xs: '0% 0 5% 0',
                         },
-                        display: 'flex',
-                        justifyContent: 'flex-end',
+                        paddingLeft: { xs: '5%', md: '10%' },
                     }}
+                    width="100%"
+                    alignItems="flex-start"
+                    justifyContent="flex-start"
                 >
+
                     <Grid
                         item
                         xs={11}
-                        md={5}
-                        order={{ xs: 2, md: 2 }}
-                        display={'grid'}
-                        justifyContent={'flex-end'}
-                        alignItems={'center'}
+                        md={11}
                         width="100%"
-                        sx={{
-                            marginTop: {
-                                lg: '-2rem',
-                                md: '-2rem',
-                                sm: '2rem',
-                                xs: '2rem',
-                            },
-                        }}
+                        display={'grid'}
+                        justifyContent={'start'}
+                        alignItems={'flex-start'}
                     >
                         <m.span variants={varFade().inUp}>
                             <Typography
@@ -61,7 +57,7 @@ export default function TakeCharge() {
                                 textAlign="start"
                                 variant="h3"
                                 fontWeight={900}
-                                sx={{ color: "#FFF200" }}
+                                color="primary"
                             >
                                 Ready to join a company
                             </Typography>
@@ -69,68 +65,15 @@ export default function TakeCharge() {
                             <Typography
                                 gutterBottom
                                 textAlign="start"
-                                variant="h3"
+                                variant="h2"
                                 fontWeight={900}
-                                sx={{ color: "#fff" }}
                             >
-                                That's got your back
+                                That’s got your back
                             </Typography>
 
-                            <Button type="button" variant="contained" color="primary" sx={{ backgroundColor: "A70E16", mt: 2, px: 2, py: 1 }}>
+                            <Button type="button" variant="contained" color="primary" sx={{ backgroundColor: '#A70E16', color: "#fff", mt: 2, px: 2, py: 1 }}>
                                 Apply Now
                             </Button>
-                        </m.span>
-                    </Grid>
-
-                    <Grid
-                        mt={8}
-                        item
-                        xs={12}
-                        md={5}
-                        width="100%"
-                        order={{ xs: 1, md: 1 }}
-                        sx={{
-                            marginTop: {
-                                lg: '-2rem',
-                                md: '-2rem',
-                                sm: '2rem',
-                                xs: '2rem',
-                            },
-                        }}
-                    >
-                        <m.span variants={varFade().inUp}>
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    justifyContent: {
-                                        lg: 'flex-end',
-                                        xs: 'center',
-                                    },
-                                    alignItems: 'center',
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        paddingInline: {
-                                            xs: '1rem',
-                                            md: '4rem',
-                                        },
-                                    }}
-                                >
-                                    <img
-                                        src={'/assets/landingpage/takeChargeImg.png'}
-                                        alt="OurMissionImage"
-                                        style={{
-                                            width: '30rem',
-                                            height: 'auto',
-                                            objectFit: 'contain',
-                                        }}
-                                    />
-                                </Box>
-                            </Box>
                         </m.span>
                     </Grid>
                 </Grid>

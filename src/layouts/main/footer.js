@@ -28,15 +28,19 @@ const SOCIALS = [
     name: 'Instagram',
     href: '/',
   },
+  {
+    name: 'Twitter',
+    href: '/',
+  },
 ];
 
 const LINKS = [
   {
-    headline: 'About Accounty',
+    headline: 'About MIM',
     children: [
-      { name: 'Home', href: 'Home' },
-      { name: 'Our Mission', href: '#OurMission' },
-      { name: "FAQ's", href: "#FAQ's" },
+      { name: "Driver", href: "/driver" },
+      { name: 'About Us', href: '/about-us' },
+      { name: "Contact Us", href: "/contact-us" },
     ],
   },
   // {
@@ -62,7 +66,7 @@ export default function Footer() {
         sx={{
           position: 'relative',
           color: 'white',
-          backgroundColor: "black"
+          backgroundColor: "black",
         }}
       >
         <Divider />
@@ -71,16 +75,18 @@ export default function Footer() {
             <Grid xs={9} md={5}>
               <Logo sx={{
                 mb: 1,
-                width: 55,
-                height: 55,
+                width: 105,
+                height: 105,
               }} />
+
               <Typography
-                variant="body2"
+                variant="body1"
                 sx={{
+                  width: { xs: '100%', md: "80%" },
                   mx: { xs: 'auto', md: 'unset' },
                 }}
               >
-                Simplify your finances with tools designed to save time and keep you in control. Everything you need, all in one place.
+                Where the Truckers come first your trusted partner in reliable trucking solutions
               </Typography>
 
               <Stack
@@ -127,23 +133,33 @@ export default function Footer() {
                     alignItems={{ xs: 'center', md: 'flex-start' }}
                     sx={{ width: 1 }}
                   >
-                    <Typography component="div">{t(list.headline)}</Typography>
+                    <Typography component="div" sx={{ fontSize: '1.05rem', fontWeight: 700 }}>{t(list.headline)}</Typography>
 
                     {/* Stack for home page section links */}
-                    {list.headline === 'About Accounty' &&
+                    {list.headline === 'About MIM' &&
                       list.children.map((link) => (
-                        <HashLink
-                          smooth
-                          to={`/#${link.name.replace(/\s+/g, '')}`}
+                        // <HashLink
+                        //   smooth
+                        //   to={`/#${link.name.replace(/\s+/g, '')}`}
+                        //   key={link.name}
+                        //   component={RouterLink}
+                        //   color="inherit"
+                        //   variant="body2"
+                        //   sx={{ color: 'white' }}
+                        //   style={{ textDecoration: 'none', color: 'white' }}
+                        // >
+                        //   {t(link.name)}
+                        // </HashLink>
+                        <Link
                           key={link.name}
                           component={RouterLink}
+                          href={link.href}
                           color="inherit"
                           variant="body2"
                           sx={{ color: 'white' }}
-                          style={{ textDecoration: 'none', color: 'white' }}
                         >
                           {t(link.name)}
-                        </HashLink>
+                        </Link>
                       ))}
 
                     {/* Stack for external links */}

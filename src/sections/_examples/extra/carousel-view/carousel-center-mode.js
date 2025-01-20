@@ -12,14 +12,25 @@ import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import TextMaxLine from 'src/components/text-max-line';
 import Carousel, { CarouselArrows, useCarousel } from 'src/components/carousel';
+import {
+  Typography,
+  Card,
+  Avatar,
+  Rating,
+} from "@mui/material";
 
 // ----------------------------------------------------------------------
+
+
+
 
 export default function CarouselCenterMode({ data }) {
   const carousel = useCarousel({
     slidesToShow: 3,
     centerMode: true,
     centerPadding: '60px',
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -50,9 +61,52 @@ export default function CarouselCenterMode({ data }) {
         onPrev={carousel.onPrev}
       >
         <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
-          {data.map((item) => (
-            <Box key={item.id} sx={{ px: 1 }}>
-              <CarouselItem item={item} />
+          {data?.map((testimonial, index) => (
+            <Box
+              key={index}
+              sx={{
+                padding: 2,
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Card
+                variant="outlined"
+                sx={{
+                  minHeight: "260px",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  padding: "2px",
+                  textAlign: "center",
+                  borderColor: "#FFD4C4",
+                  borderWidth: "2px",
+                  borderRadius: "16px",
+                  margin: "10px",
+                  width: "90%",
+                }}
+              >
+                <CardContent>
+                  <Avatar
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    sx={{ width: 80, height: 80, margin: "0 auto", mb: 2 }}
+                  />
+                  <Typography
+                    variant="h6"
+                    color="textPrimary"
+                    sx={{ fontWeight: "bold", mb: 1 }}
+                  >
+                    {testimonial.name}
+                  </Typography>
+                  <Rating value={testimonial.rating} readOnly sx={{ mb: 1 }} />
+                  <Typography variant="body2" color="textSecondary">
+                    {testimonial.feedback}
+                  </Typography>
+                </CardContent>
+              </Card>
             </Box>
           ))}
         </Carousel>

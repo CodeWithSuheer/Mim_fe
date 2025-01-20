@@ -10,6 +10,7 @@ import TakeCharge from '../home-takeCharge';
 import HomeFAQs from '../home-faqs';
 import WhyChooseUs from '../home-whyChooseUs';
 import ReadyToJoin from '../home-readyToJoin';
+import Testimonials from '../home-testimonial';
 
 // ----------------------------------------------------------------------
 
@@ -24,6 +25,7 @@ export default function HomeView() {
       <div id=""><TakeCharge /></div>
       <div id=""><WhyChooseUs /></div>
       <div id=""><ReadyToJoin /></div>
+      <div id=""><Testimonials /></div>
     </>
   );
 }
