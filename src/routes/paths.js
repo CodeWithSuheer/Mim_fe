@@ -13,7 +13,7 @@ const ROOTS = {
   AUTH_DEMO: '/auth-demo',
   DASHBOARD: '/dashboard',
   SUPER_ADMIN_DASHBOARD: '/super-admin-dashboard',
-  ADMIN_DASHBOARD:'/admin-dashboard'
+  ADMIN_DASHBOARD: '/admin-dashboard'
 
 };
 
@@ -27,6 +27,8 @@ export const paths = {
   about: '/about-us',
   contact: '/contact-us',
   driver: '/driver',
+  tac: '/tac',
+  privacyPolicy: '/privacy-policy',
   faqs: '/faqs',
   page403: '/403',
   page404: '/404',
@@ -247,7 +249,7 @@ export const paths = {
       details: (id) => `${ROOTS.SUPER_ADMIN_DASHBOARD}/service/${paramCase(id)}`,
       edit: (id) => `${ROOTS.SUPER_ADMIN_DASHBOARD}/service/${paramCase(id)}/edit`,
     },
-    attendance:{
+    attendance: {
       root: `${ROOTS.SUPER_ADMIN_DASHBOARD}/attendance`,
       new: `${ROOTS.SUPER_ADMIN_DASHBOARD}/attendance/new`,
       list: `${ROOTS.SUPER_ADMIN_DASHBOARD}/attendance/list`,
@@ -374,7 +376,7 @@ export const paths = {
       details: (id) => `${ROOTS.ADMIN_DASHBOARD}/service/${paramCase(id)}`,
       edit: (id) => `${ROOTS.ADMIN_DASHBOARD}/service/${paramCase(id)}/edit`,
     },
-    attendance:{
+    attendance: {
       root: `${ROOTS.ADMIN_DASHBOARD}/attendance`,
       new: `${ROOTS.ADMIN_DASHBOARD}/attendance/new`,
       list: `${ROOTS.ADMIN_DASHBOARD}/attendance/list`,
@@ -438,5 +440,5 @@ export const paths = {
       },
     },
   },
- 
+
 };

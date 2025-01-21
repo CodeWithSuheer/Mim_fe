@@ -61,14 +61,14 @@ export default function Header() {
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center', pt: 1, overflow: 'hidden', }}>
           <Logo
             sx={{
-              width: 110,
-              height: 110,
-              maxHeight: '100%', // Constrain the logo height to the navbar
-              maxWidth: '100%', // Constrain the logo width
-              objectFit: 'contain', // Ensures the logo scales proportionally
-              display: 'block', // Prevent any inline rendering issues
-              margin: 'auto', // Center the logo horizontally
-              position: 'relative', // Helps with alignment tweaks if needed
+              width: { xs: 100, md: 110 },
+              height: { xs: 70, md: 115 },
+              maxHeight: '100%',
+              maxWidth: '100%',
+              objectFit: 'contain',
+              display: 'block',
+              margin: 'auto',
+              position: 'relative',
             }}
           />
 
@@ -77,14 +77,6 @@ export default function Header() {
           {mdUp && <NavDesktop offsetTop={offsetTop} data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            {/* <Button
-              color="primary"
-              variant="contained"
-              sx={{ color: "#000", fontWeight: 500 }}
-            >
-              Login | Sign up
-            </Button> */}
-
             {mdUp && <LoginButton />}
 
             {/* <SettingsButton

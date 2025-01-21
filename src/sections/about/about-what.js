@@ -32,17 +32,18 @@ export default function AboutWhat() {
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 8, md: 10 },
+        py: { xs: 4, md: 10 },
       }}
     >
       <m.div variants={varFade().inUp}>
-        <Typography 
-          variant="h1" 
-          align="center" 
+        <Typography
+          variant="h1"
+          align="center"
           color={'#A70E16'}
-          sx={{ 
-            mb: 3,
-            fontSize: { xs: '2.3rem', md: '3.3rem' },
+          sx={{
+            mb: 5,
+            fontSize: { xs: '2rem', md: '2.5rem' },
+            color: '#A70E16',
             position: 'relative',
             display: 'inline-block',
             left: '50%',
@@ -55,7 +56,7 @@ export default function AboutWhat() {
               width: '100%',
               height: '3px',
               backgroundColor: '#A70E16',
-            },
+            }
           }}
         >
           About Us
@@ -77,11 +78,11 @@ export default function AboutWhat() {
       </m.div>
 
       <m.div variants={varFade().inUp}>
-        <Typography 
-          variant="h1" 
-          align="center" 
-        color={'#A70E16'}
-          sx={{ 
+        <Typography
+          variant="h1"
+          align="center"
+          color={'#A70E16'}
+          sx={{
             mb: 8,
             fontSize: { xs: '2rem', md: '2.5rem' },
             color: '#A70E16',
@@ -105,13 +106,24 @@ export default function AboutWhat() {
       </m.div>
 
       <Grid container spacing={4} alignItems="center">
-        <Grid xs={12} md={6}  sx={{ order: { xs: 2, md: 1 } }}>
+        <Grid xs={12} md={6} sx={{ order: { xs: 2, md: 1 } }}>
           <m.div variants={varFade().inLeft}>
             <Stack spacing={3}>
-              <Typography paragraph>
+              <Typography
+                paragraph
+                sx={{
+                  fontSize: { xs: '1rem', md: '1.05rem' },
+                  lineHeight: 1.6,
+                }}>
                 MIM Transport Group was born out of a deep understanding of the challenges owner-operators face every day. Our founders, seasoned veterans in the trucking industry, recognized the need for a company that not only values professionalism but also fosters a culture of respect and fairness. Starting with just a small fleet and big dreams, we've grown into a nationally trusted partner for owner-operators across the country.
               </Typography>
-              <Typography paragraph>
+
+              <Typography
+                paragraph
+                sx={{
+                  fontSize: { xs: '1rem', md: '1.05rem' },
+                  lineHeight: 1.6,
+                }}>
                 We understand that trucking isn't just a job—it's a lifestyle. That's why we've built a community where drivers feel valued and supported. From transparent communication and dependable pay to a team that's always just a call away, we've created a company that puts people first. At MIM Transport Group, you're not just a driver; you're family.
               </Typography>
             </Stack>
@@ -131,7 +143,12 @@ export default function AboutWhat() {
 
         <Grid xs={12} md={6} sx={{ order: { xs: 4, md: 4 } }}>
           <m.div variants={varFade().inLeft}>
-            <Typography paragraph sx={{lineHeight:'24px'}}>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: { xs: '1rem', md: '1.05rem' },
+                lineHeight: 1.6,
+              }}>
               We've always prioritized honesty and dependability. We understand the challenges of being an owner-operator, and that's why we've built our company on the values of transparency and support. Over the years, we've grown into a trusted partner for drivers across the country, offering steady opportunities and a team that truly cares about your success.
             </Typography>
           </m.div>
@@ -142,7 +159,7 @@ export default function AboutWhat() {
             <Image
               alt="MIM Transport Fleet"
               src="/assets/images/about/truck_2.png"
-              sx={{ 
+              sx={{
                 borderRadius: 2,
                 height: { xs: '200px', md: '300px' },
                 width: '100%',

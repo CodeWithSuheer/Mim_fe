@@ -10,7 +10,7 @@ import { MotionContainer, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
-export default function AboutHero() {
+export default function PrivacyPolicyHero() {
   return (
     <Box
       sx={{
@@ -21,7 +21,7 @@ export default function AboutHero() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundImage:
-          'url(/assets/images/about/aboutBanner.jpg)',
+          'url(/assets/images/about/ppBanner.jpg)',
       }}
     >
       <Container component={MotionContainer}>

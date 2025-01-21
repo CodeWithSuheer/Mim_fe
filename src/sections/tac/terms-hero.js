@@ -10,7 +10,7 @@ import { MotionContainer, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
-export default function AboutHero() {
+export default function TermsHero() {
   return (
     <Box
       sx={{

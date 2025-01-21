@@ -7,6 +7,8 @@ import CompactLayout from 'src/layouts/compact';
 // components
 import { SplashScreen } from 'src/components/loading-screen';
 import DriverPage from 'src/pages/driver';
+import TermsPage from 'src/sections/tac/terms';
+import PrivacyPolicyPage from 'src/sections/privacyPolicy/privacyPolicy';
 
 // ----------------------------------------------------------------------
 
@@ -45,6 +47,8 @@ export const mainRoutes = [
       { path: 'contact-us', element: <ContactPage /> },
       { path: 'faqs', element: <FaqsPage /> },
       { path: 'driver', element: <DriverPage /> },
+      { path: 'tac', element: <TermsPage /> },
+      { path: 'privacy-policy', element: <PrivacyPolicyPage /> },
       {
         path: 'product',
         children: [

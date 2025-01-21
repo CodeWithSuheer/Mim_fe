@@ -76,6 +76,7 @@ export default function AboutApart() {
         flexDirection: 'column',
         justifyContent: 'center',
         padding: {
+          xs: '5% 0',
           lg: '4% 0',
         },
         justifyContent: 'center',
@@ -84,23 +85,19 @@ export default function AboutApart() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        overflowX: 'hidden',
       }}
     >
-
-
       <Container>
-        <Box sx={{ mb: { xs: 8, md: 10 }, textAlign: 'center' }}>
+        <Box sx={{ mb: { xs: 4, md: 8 }, textAlign: 'center' }}>
           <m.div variants={varFade().inUp}>
             <Typography
               variant="h2"
+              align="center"
+              color={'#A70E16'}
               sx={{
-                fontFamily: 'Montserrat',
-                mt:{xs:5,md:0},
-                fontSize: { xs: '40px', md: '54px' },
-                fontWeight: 700,
-                lineHeight: { xs: '48px', md: '64.8px' },
-                color: '#B22222',
+                mt: { xs: 5, md: 0 },
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                color: '#A70E16',
                 position: 'relative',
                 display: 'inline-block',
                 '&::after': {
@@ -133,6 +130,7 @@ export default function AboutApart() {
                     overflow: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
+                    minHeight: '23rem'
                   }}
                 >
                   <Box sx={{ position: 'relative', pt: '60%' }}>
@@ -156,8 +154,7 @@ export default function AboutApart() {
                     <Typography
                       variant="h5"
                       sx={{
-                        mb: 2,
-                        fontFamily: 'Inter',
+                        mb: 1,
                         fontSize: '18px',
                         fontWeight: 700,
                         color: 'text.primary',
@@ -169,12 +166,12 @@ export default function AboutApart() {
 
                     <Typography
                       sx={{
-                        fontFamily: 'Inter',
                         fontSize: '14px',
                         fontWeight: 400,
                         lineHeight: '16.94px',
                         color: 'text.secondary',
                         textAlign: 'center',
+                        letterSpacing: '0.5px',
                         flexGrow: 1
                       }}
                     >

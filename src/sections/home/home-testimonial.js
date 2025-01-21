@@ -65,7 +65,7 @@ export default function Testimonials() {
                     flexDirection: 'column',
                     paddingBlock: {
                         xs: '10% 0',
-                        lg: '4% 0',
+                        lg: '5% 0',
                     },
                     px: 2,
                     justifyContent: 'center',
@@ -78,7 +78,7 @@ export default function Testimonials() {
                     // overflowX: 'hidden',
                 }}
             >
-                <Grid item xs={12} md={12}>
+                <Grid item xs={12} md={12} pb={2}>
                     <m.span variants={varFade().inUp}>
                         <Typography gutterBottom variant="h3" fontWeight={800}
                             sx={{
