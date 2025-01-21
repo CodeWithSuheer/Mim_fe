@@ -6,6 +6,7 @@ import SimpleLayout from 'src/layouts/simple';
 import CompactLayout from 'src/layouts/compact';
 // components
 import { SplashScreen } from 'src/components/loading-screen';
+import DriverPage from 'src/pages/driver';
 
 // ----------------------------------------------------------------------
 
@@ -43,7 +44,7 @@ export const mainRoutes = [
       { path: 'about-us', element: <AboutPage /> },
       { path: 'contact-us', element: <ContactPage /> },
       { path: 'faqs', element: <FaqsPage /> },
-      { path: 'driver', element: <FaqsPage /> },
+      { path: 'driver', element: <DriverPage /> },
       {
         path: 'product',
         children: [

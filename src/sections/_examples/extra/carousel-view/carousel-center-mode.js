@@ -56,7 +56,7 @@ export default function CarouselCenterMode({ data }) {
     >
       <CarouselArrows
         filled
-        icon="noto:rightwards-hand"
+        icon="tabler:arrow-right"
         onNext={carousel.onNext}
         onPrev={carousel.onPrev}
       >
@@ -75,14 +75,15 @@ export default function CarouselCenterMode({ data }) {
                 variant="outlined"
                 sx={{
                   minHeight: "260px",
-                  height: "100%",
+                  minHeight: "19rem",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  backgroundColor: '#FFF5EC',
                   padding: "2px",
                   textAlign: "center",
-                  borderColor: "#FFD4C4",
-                  borderWidth: "2px",
+                  borderColor: "#A70E16",
+                  borderWidth: "1.5px",
                   borderRadius: "16px",
                   margin: "10px",
                   width: "90%",
@@ -92,7 +93,7 @@ export default function CarouselCenterMode({ data }) {
                   <Avatar
                     src={testimonial.image}
                     alt={testimonial.name}
-                    sx={{ width: 80, height: 80, margin: "0 auto", mb: 2 }}
+                    sx={{ width: 100, height: 100, margin: "0 auto", mb: 2 }}
                   />
                   <Typography
                     variant="h6"

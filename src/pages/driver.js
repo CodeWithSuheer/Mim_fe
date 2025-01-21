@@ -1,17 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 // sections
-import { HomeView } from 'src/sections/home/view';
+import DriverView from 'src/sections/driver/driver-view';
 
 // ----------------------------------------------------------------------
 
-export default function HomePage() {
+export default function DriverPage() {
   return (
     <>
       <Helmet>
-        <title> MIM Transport</title>
+        <title> Driver</title>
       </Helmet>
 
-      <HomeView />
+      <DriverView />
     </>
   );
 }

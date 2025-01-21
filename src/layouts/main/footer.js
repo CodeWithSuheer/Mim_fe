@@ -19,6 +19,15 @@ import EmailInboxIcon from 'src/assets/icons/email-inbox-icon';
 import { useLocales } from 'src/locales';
 import { HashLink } from 'react-router-hash-link';
 
+import * as Yup from 'yup';
+import { useForm } from 'react-hook-form';
+import FormProvider, { RHFTextField } from 'src/components/hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { enqueueSnackbar } from 'notistack';
+// import { useNewsLetterMutation } from 'src/store/Reducer/newsLetter';
+import { LoadingButton } from '@mui/lab';
+
 const SOCIALS = [
   {
     name: 'Facebook',
@@ -59,6 +68,48 @@ const LINKS = [
 export default function Footer() {
   const { t } = useLocales();
 
+  // const [sendNewsLetter] = useNewsLetterMutation();
+  let sendNewsLetter;
+
+
+  const emailSchema = Yup.object().shape({
+    email: Yup.string().required('Email is required').email('Email must be a valid email address'),
+  });
+
+  const methods = useForm({
+    resolver: yupResolver(emailSchema),
+  });
+
+  const {
+    reset,
+    handleSubmit,
+    watch,
+    setValue,
+    formState: { isSubmitting },
+  } = methods;
+
+  const values = watch();
+
+
+  const onSubmit = handleSubmit(async (data) => {
+    try {
+      const newData = {
+        email: data.email,
+      };
+
+
+      const response = await sendNewsLetter(newData);
+
+      if (!response.error) {
+        enqueueSnackbar(response?.data?.message || 'Success!');
+        reset();
+        setValue('email', '');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
   const mainFooter = (
     <>
       <Box
@@ -79,15 +130,64 @@ export default function Footer() {
                 height: 105,
               }} />
 
-              <Typography
-                variant="body1"
-                sx={{
-                  width: { xs: '100%', md: "80%" },
-                  mx: { xs: 'auto', md: 'unset' },
-                }}
-              >
-                Where the Truckers come first your trusted partner in reliable trucking solutions
-              </Typography>
+              <FormProvider methods={methods} onSubmit={onSubmit}>
+                <Grid
+                  item
+                  spacing={0}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    // marginTop: '1rem',
+                  }}
+                >
+                  <RHFTextField
+                    name="email"
+                    // label="Email"
+                    variant="outlined"
+                    placeholder="Enter your email address"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <Iconify icon="mdi:email-outline" width={28} color="#A70E16" />
+                        </InputAdornment>
+                      ),
+                      sx: {
+                        color: '#fff',
+                        borderRadius: '1rem 0 0 1rem',
+                        borderColor: '#484848',
+                        borderWidth: '1px',
+                        borderStyle: 'solid',
+                        backgroundColor: 'tranparent',
+                      },
+                    }}
+                  />
+
+                  <LoadingButton
+                    color="primary"
+                    size="large"
+                    // sx={{ minWidth: '10rem', marginTop: '1rem' }}
+                    style={{
+                      borderRadius: '0 1rem 1rem 0',
+                      borderWidth: '1px',
+                      borderStyle: 'solid',
+                      borderColor: '#A70E16',
+                      height: '100%',
+                      minHeight: '55px',
+                      width: '10rem',
+                      backgroundColor: '#A70E16',
+                      // '&:hover': {
+                      //   backgroundColor: '#6C63FF',
+                      // },
+                    }}
+                    type="submit"
+                    variant="contained"
+                    loading={isSubmitting}
+                    disabled={isSubmitting}
+                  >
+                    Continue
+                  </LoadingButton>
+                </Grid>
+              </FormProvider>
 
               <Stack
                 direction="row"

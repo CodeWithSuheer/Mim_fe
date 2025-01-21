@@ -58,8 +58,19 @@ export default function Header() {
           }),
         }}
       >
-        <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo sx={{ width: 110, height: 95, paddingTop: 0.5 }} />
+        <Container sx={{ height: 1, display: 'flex', alignItems: 'center', pt: 1, overflow: 'hidden', }}>
+          <Logo
+            sx={{
+              width: 110,
+              height: 110,
+              maxHeight: '100%', // Constrain the logo height to the navbar
+              maxWidth: '100%', // Constrain the logo width
+              objectFit: 'contain', // Ensures the logo scales proportionally
+              display: 'block', // Prevent any inline rendering issues
+              margin: 'auto', // Center the logo horizontally
+              position: 'relative', // Helps with alignment tweaks if needed
+            }}
+          />
 
           <Box sx={{ flexGrow: 1 }} />
 

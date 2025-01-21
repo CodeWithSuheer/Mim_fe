@@ -9,60 +9,6 @@ import { MotionViewport, varFade } from 'src/components/animate';
 import CarouselCenterMode from '../_examples/extra/carousel-view/carousel-center-mode';
 import { _mock } from 'src/_mock';
 
-
-const cardsData = [
-    {
-        title: "MODERN FLEET",
-        description: "A modern fleet featuring the latest in transportation technology.",
-        icon: "/assets/home/whyChoose/img1.png",
-    },
-    {
-        title: "EXPERT DRIVERS",
-        description: "Work with a partner that keeps its word and is consistent.",
-        icon: "/assets/home/whyChoose/img2.png",
-    },
-    {
-        title: "Comprehensive coverage",
-        description: "Expert drivers committed to safety and punctuality.",
-        icon: "/assets/home/whyChoose/img3.png",
-    },
-    {
-        title: "Family-like Environment",
-        description: "Years of Industry Expertise",
-        icon: "/assets/home/whyChoose/img4.png",
-    },
-    {
-        title: "Trustworthy",
-        description: "A family-like environment where owner-operator's ease and success come first.",
-        icon: "/assets/home/whyChoose/img5.png",
-    },
-    {
-        title: "Reliable",
-        description: "A modern fleet featuring the latest in transportation technology.",
-        icon: "/assets/home/whyChoose/img6.png",
-    },
-    {
-        title: "Consistent",
-        description: "Work with a partner that keeps its word and is consistent.",
-        icon: "/assets/home/whyChoose/img7.png",
-    },
-    {
-        title: "Transparent",
-        description: "Work with a partner that keeps its word and is consistent.",
-        icon: "/assets/home/whyChoose/img8.png",
-    },
-    {
-        title: "Nurturing",
-        description: "A modern fleet featuring the latest in transportation technology.",
-        icon: "/assets/home/whyChoose/img9.png",
-    },
-    {
-        title: "Equitable",
-        description: "Work with a partner that keeps its word and is consistent.",
-        icon: "/assets/home/whyChoose/img10.png",
-    },
-];
-
 const testimonialsData = [
     {
         name: "James Pattinson",
