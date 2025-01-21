@@ -125,7 +125,7 @@ export default function Footer() {
         <Divider />
         <Container sx={{ pt: 8, pb: 5, textAlign: { xs: 'center', md: 'unset' } }}>
           <Grid container justifyContent={{ xs: 'center', md: 'space-between' }}>
-            <Grid xs={9} md={5}>
+            <Grid xs={12} md={5}>
               <Logo sx={{
                 mb: 1,
                 width: 105,
@@ -146,7 +146,7 @@ export default function Footer() {
                     name="email"
                     // label="Email"
                     variant="outlined"
-                    placeholder="Enter your email address"
+                    placeholder="Enter your email"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">

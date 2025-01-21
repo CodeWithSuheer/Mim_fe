@@ -149,7 +149,7 @@ export default function ContactForm() {
           fullWidth 
           label="Last Name" 
           variant='standard' 
-          defaultValue="Doe"
+          // defaultValue="Doe"
           InputLabelProps={{ shrink: true, style: { color: '#B3B3B3', fontSize: '14px' } }}
           sx={{ '& input': { fontWeight: 600, fontSize: '16px', color: '#666' } }}
         />
@@ -166,7 +166,7 @@ export default function ContactForm() {
           fullWidth 
           label="Phone Number" 
           variant='standard' 
-          defaultValue="+1 012 3456 789"
+          // defaultValue="+1 012 3456 789"
           InputLabelProps={{ shrink: true, style: { color: '#B3B3B3', fontSize: '14px' } }}
           sx={{ '& input': { fontWeight: 600, fontSize: '16px', color: 'black' } }}
         />
