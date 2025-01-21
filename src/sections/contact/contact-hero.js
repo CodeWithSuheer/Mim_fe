@@ -45,56 +45,19 @@ export default function ContactHero() {
     <Box
       sx={{
         ...bgGradient({
-          color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/images/contact/hero.jpg',
+          imgUrl: '/assets/images/contact/hero.png',
         }),
         height: { md: 560 },
         py: { xs: 10, md: 0 },
         overflow: 'hidden',
         position: 'relative',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundImage:
+          'url(/assets/images/contact/hero.png)',
       }}
     >
-      <Container component={MotionContainer}>
-        <Box
-          sx={{
-            bottom: { md: 80 },
-            position: { md: 'absolute' },
-            textAlign: { xs: 'center', md: 'unset' },
-          }}
-        >
-          <TextAnimate text="Where" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
-          <br />
-
-          <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
-            <TextAnimate text="to" />
-            <TextAnimate text="find" />
-            <TextAnimate text="us?" />
-          </Stack>
-
-          <Stack
-            spacing={5}
-            alignItems={{ xs: 'center', md: 'unset' }}
-            direction={{ xs: 'column', md: 'row' }}
-            sx={{ mt: 5, color: 'common.white' }}
-          >
-            {CONTACTS.map((contact) => (
-              <Stack key={contact.country} sx={{ maxWidth: 180 }}>
-                <m.div variants={varFade().in}>
-                  <Typography variant="h6" gutterBottom>
-                    {contact.country}
-                  </Typography>
-                </m.div>
-
-                <m.div variants={varFade().inRight}>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                    {contact.address}
-                  </Typography>
-                </m.div>
-              </Stack>
-            ))}
-          </Stack>
-        </Box>
-      </Container>
+     
     </Box>
   );
 }
