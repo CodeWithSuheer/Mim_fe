@@ -45,25 +45,20 @@ const SOCIALS = [
 
 const LINKS = [
   {
-    headline: 'About MIM',
+    headline: 'Company',
     children: [
-      { name: "Driver", href: "/driver" },
+      { name: 'Home', href: '/' },
       { name: 'About Us', href: '/about-us' },
+      { name: "Driver Application", href: "/driver" },
       { name: "Contact Us", href: "/contact-us" },
-      { name: "Privacy Policy", href: "/privacy-policy" },
-      { name: "Terms", href: "/tac" },
     ],
   },
-  // {
-  //   headline: 'Legal',
-  //   children: [
-  //     { name: 'Privacy Policy', href: '/privacy-policy' },
-  //     { name: 'What We Offer', href: '/what-we-offer' },
-  //   ],
-  // },
   {
-    headline: 'Find Us',
-    children: SOCIALS,
+    headline: 'Policies',
+    children: [
+      { name: "Cookies & Privacy Policy", href: "/privacy-policy" },
+      { name: 'Terms & Condition', href: '/tac' },
+    ],
   },
 ];
 
@@ -91,7 +86,6 @@ export default function Footer() {
   } = methods;
 
   const values = watch();
-
 
   const onSubmit = handleSubmit(async (data) => {
     try {
@@ -123,7 +117,7 @@ export default function Footer() {
         }}
       >
         <Divider />
-        <Container sx={{ pt: 8, pb: 5, textAlign: { xs: 'center', md: 'unset' } }}>
+        <Container sx={{ pt: 8, pb: { xs: 2, md: 5 }, textAlign: { xs: 'center', md: 'unset' } }}>
           <Grid container justifyContent={{ xs: 'center', md: 'space-between' }}>
             <Grid xs={12} md={5}>
               <Logo sx={{
@@ -177,9 +171,6 @@ export default function Footer() {
                       minHeight: '55px',
                       width: '10rem',
                       backgroundColor: '#A70E16',
-                      // '&:hover': {
-                      //   backgroundColor: '#6C63FF',
-                      // },
                     }}
                     type="submit"
                     variant="contained"
@@ -191,7 +182,7 @@ export default function Footer() {
                 </Grid>
               </FormProvider>
 
-              <Stack
+              {/* <Stack
                 direction="row"
                 justifyContent={{ xs: 'center', md: 'flex-start' }}
                 sx={{
@@ -223,11 +214,11 @@ export default function Footer() {
                     <Iconify color="#fafafa" icon={'basil:instagram-solid'} width={30} />
                   </Link>
                 </IconButton>
-              </Stack>
+              </Stack> */}
             </Grid>
 
             <Grid xs={12} md={6}>
-              <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
+              <Stack spacing={5} direction={{ xs: 'column', md: 'row' }} sx={{ my: { xs: 4, md: 0 } }}>
                 {LINKS.map((list) => (
                   <Stack
                     key={list.headline}
@@ -236,22 +227,8 @@ export default function Footer() {
                     sx={{ width: 1 }}
                   >
                     <Typography component="div" sx={{ fontSize: '1.05rem', fontWeight: 700 }}>{t(list.headline)}</Typography>
-
-                    {/* Stack for home page section links */}
-                    {list.headline === 'About MIM' &&
+                    {list.headline === 'Company' &&
                       list.children.map((link) => (
-                        // <HashLink
-                        //   smooth
-                        //   to={`/#${link.name.replace(/\s+/g, '')}`}
-                        //   key={link.name}
-                        //   component={RouterLink}
-                        //   color="inherit"
-                        //   variant="body2"
-                        //   sx={{ color: 'white' }}
-                        //   style={{ textDecoration: 'none', color: 'white' }}
-                        // >
-                        //   {t(link.name)}
-                        // </HashLink>
                         <Link
                           key={link.name}
                           component={RouterLink}
@@ -280,7 +257,7 @@ export default function Footer() {
                       ))}
 
                     {/* Stack for "Find Us" social links */}
-                    {list.headline === 'Find Us' &&
+                    {list.headline === 'Policies' &&
                       list.children.map((social) => (
                         <Link
                           key={social.name}
@@ -295,6 +272,33 @@ export default function Footer() {
                         </Link>
                       ))}
                   </Stack>
+                ))}
+              </Stack>
+
+              <Stack
+                direction="row"
+                justifyContent={{ xs: 'center', md: 'flex-end' }}
+                sx={{
+                  mt: 1,
+                  mb: { xs: 5, md: 0 },
+                }}
+              >
+                {[
+                  { href: '/', icon: 'ri:twitter-x-fill' },
+                  { href: '/', icon: 'mdi:instagram' },
+                  { href: '/', icon: 'ic:outline-facebook' },
+                  { href: '/', icon: 'mdi:linkedin' },
+                ].map(({ href, icon }, index) => (
+                  <IconButton key={index} sx={{ mr: 1 }}>
+                    <Link
+                      href={href}
+                      target="_blank"
+                      rel="noopener"
+                      underline="none"
+                    >
+                      <Iconify color="#fafafa" icon={icon} width={28} />
+                    </Link>
+                  </IconButton>
                 ))}
               </Stack>
             </Grid>

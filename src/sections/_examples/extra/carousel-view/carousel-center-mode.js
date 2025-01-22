@@ -102,7 +102,7 @@ export default function CarouselCenterMode({ data }) {
                   >
                     {testimonial.name}
                   </Typography>
-                  <Rating value={testimonial.rating} readOnly sx={{ mb: 1 }} />
+                  <Rating value={testimonial.rating} readOnly sx={{ mb: 1, color: '#A70E16' }} />
                   <Typography variant="body2" color="textSecondary">
                     {testimonial.feedback}
                   </Typography>

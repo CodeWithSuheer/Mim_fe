@@ -2,9 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-
 import { m } from 'framer-motion';
 import { MotionViewport, varFade } from 'src/components/animate';
+import line from 'src/assets/landingPage/line.png'
 
 export default function OurMission() {
 
@@ -28,22 +28,27 @@ export default function OurMission() {
                 }}
             >
 
-                <Grid item xs={12} md={12} px={2}>
+                <Grid item xs={12} md={12} px={2}
+                    sx={{
+                        marginBottom: { xs: '2rem', md: '3rem' }
+                    }}
+                >
                     <m.span variants={varFade().inUp}>
-                        <Typography gutterBottom variant="h2" fontWeight={800}
+                        <Typography
+                            gutterBottom
+                            textAlign={'center'}
+                            variant="h2"
+                            fontWeight={700}
                             sx={{
                                 color: '#A70E16',
-                                marginBottom: {
-                                    xs: '1rem',
-                                    lg: '4rem'
-                                },
-                                textAlign: {
-                                    xs: 'start',
-                                    lg: 'center'
-                                }
-                            }}>
+                            }}
+                        >
                             Where Truckers Come First
                         </Typography>
+
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: { md: '90%', xs: '60%' }, margin: 'auto' }}>
+                            <img src={line} alt='line' />
+                        </Box>
                     </m.span>
                 </Grid>
 
@@ -67,6 +72,9 @@ export default function OurMission() {
                         display={'grid'}
                         justifyContent={'center'}
                         alignItems={'center'}
+                        sx={{
+                            textAlign: 'justify',
+                        }}
                     >
                         <m.span variants={varFade().inUp}>
                             <Typography
@@ -153,6 +161,9 @@ export default function OurMission() {
                         display={'grid'}
                         justifyContent={'center'}
                         alignItems={'center'}
+                        sx={{
+                            textAlign: 'justify',
+                        }}
                     >
                         <m.span variants={varFade().inUp}>
                             <Typography
@@ -239,6 +250,9 @@ export default function OurMission() {
                         display={'grid'}
                         justifyContent={'center'}
                         alignItems={'center'}
+                        sx={{
+                            textAlign: 'justify',
+                        }}
                     >
                         <m.span variants={varFade().inUp}>
                             <Typography
@@ -325,6 +339,9 @@ export default function OurMission() {
                         display={'grid'}
                         justifyContent={'center'}
                         alignItems={'center'}
+                        sx={{
+                            textAlign: 'justify',
+                        }}
                     >
                         <m.span variants={varFade().inUp}>
                             <Typography
@@ -390,7 +407,7 @@ export default function OurMission() {
                         </m.span>
                     </Grid>
                 </Grid>
-            </Box>
+            </Box >
         </>
     );
 }

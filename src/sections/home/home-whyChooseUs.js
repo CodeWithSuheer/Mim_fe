@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { m } from 'framer-motion';
 import { MotionViewport, varFade } from 'src/components/animate';
-
+import line from 'src/assets/landingPage/line.png'
 
 const cardsData = [
     {
@@ -83,22 +83,30 @@ export default function WhyChooseUs() {
                     overflowX: 'hidden',
                 }}
             >
-                <Grid item xs={12} md={12}>
+                <Grid
+                    item
+                    xs={12}
+                    md={12}
+                    sx={{
+                        marginBottom: { xs: '2rem', md: '3rem' }
+                    }}
+                >
                     <m.span variants={varFade().inUp}>
-                        <Typography gutterBottom variant="h2" fontWeight={800}
+                        <Typography
+                            gutterBottom
+                            textAlign={'center'}
+                            variant="h2"
+                            fontWeight={700}
                             sx={{
                                 color: '#A70E16',
-                                marginBottom: {
-                                    xs: '2.5rem',
-                                    lg: '4rem'
-                                },
-                                textAlign: {
-                                    xs: 'start',
-                                    lg: 'center'
-                                }
-                            }}>
+                            }}
+                        >
                             Why Choose Us
                         </Typography>
+
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: { md: '90%', xs: '50%' }, margin: 'auto' }}>
+                            <img src={line} alt='line' />
+                        </Box>
                     </m.span>
                 </Grid>
 
@@ -139,6 +147,10 @@ export default function WhyChooseUs() {
                                     textAlign: "center",
                                     // maxWidth: "250px", 
                                     minHeight: "240px",
+                                    transition: "background-color 0.3s ease",
+                                    "&:hover": {
+                                        backgroundColor: "#fde7e9",
+                                    },
                                 }}
                             >
                                 <Box

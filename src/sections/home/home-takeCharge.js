@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { m } from 'framer-motion';
 import { MotionViewport, varFade } from 'src/components/animate';
+import line from 'src/assets/landingPage/line.png'
 
 const drivingSuccessData = [
     {
@@ -57,22 +58,27 @@ export default function TakeCharge() {
                 }}
             >
 
-                <Grid item xs={12} md={12}>
+                <Grid item xs={12} md={12}
+                    sx={{
+                        marginBottom: { xs: '2rem', md: '5rem' }
+                    }}
+                >
                     <m.span variants={varFade().inUp}>
-                        <Typography gutterBottom variant="h2" fontWeight={800}
+                        <Typography
+                            gutterBottom
+                            textAlign={'center'}
+                            variant="h2"
+                            fontWeight={700}
                             sx={{
                                 color: '#fff',
-                                marginBottom: {
-                                    xs: '0.5rem',
-                                    lg: '5rem'
-                                },
-                                textAlign: {
-                                    xs: 'start',
-                                    lg: 'center'
-                                }
-                            }}>
+                            }}
+                        >
                             Driving Success
                         </Typography>
+
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: { md: '90%', xs: '60%' }, margin: 'auto' }}>
+                            <img src={line} alt='line' />
+                        </Box>
                     </m.span>
                 </Grid>
 

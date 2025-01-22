@@ -36,7 +36,7 @@ export default function HeroSection() {
             sm: '15% 0',
             xs: '25% 0 5% 0',
           },
-          paddingLeft: { xs: '5%', md: '10%' }, // Align content to the left
+          paddingLeft: { xs: '5%', md: '10%' },
         }}
         alignItems="flex-start"
         justifyContent="flex-start"

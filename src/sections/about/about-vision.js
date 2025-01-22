@@ -11,6 +11,7 @@ import Grid from '@mui/material/Grid';
 import Image from 'src/components/image';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { margin } from '@mui/system';
+import line from 'src/assets/landingPage/line.png'
 
 export default function AboutFounder() {
   const theme = useTheme();
@@ -24,6 +25,7 @@ export default function AboutFounder() {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: {
+            xs: '10% 0',
             lg: '4% 0',
           },
           backgroundImage: `url(/assets/images/about/founder_bg.png)`,
@@ -35,36 +37,54 @@ export default function AboutFounder() {
       >
         <Container>
           <Grid container spacing={3}>
-            {/* Title */}
-            <Grid item xs={12}>
+            <Grid
+              item
+              xs={12}
+              md={12}
+              px={2}
+              sx={{
+                marginBottom: { xs: '0rem', md: '3rem' },
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
               <m.span variants={varFade().inUp}>
-                <Typography
-                  variant="h2"
-                  sx={{
-                    mb: 2,
-                    mt: { xs: 5, md: 0 },
-                    color: '#FFF200',
-                    textAlign: { xs: 'start', lg: 'center' },
-                    fontWeight: 700,
-                    position: 'relative',
-                    display: 'inline-block',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    '&::after': {
-                      content: '""',
-                      position: 'absolute',
-                      bottom: -8,
-                      left: 0,
+                <Box sx={{ display: 'inline-block', textAlign: 'center', margin: '0 auto' }}>
+                  <Typography
+                    variant="h2"
+                    fontWeight={700}
+                    sx={{
+                      color: '#FFF200',
+                      marginBottom: '-0.7rem',
+                    }}
+                  >
+                    About the Founder
+                  </Typography>
+
+                  <Box
+                    mt={0}
+                    pt={0}
+                    sx={{
                       width: '100%',
-                      height: '3px',
-                      backgroundColor: '#A70E16',
-                    }
-                  }}
-                >
-
-
-                  About the Founder
-                </Typography>
+                      margin: '0 auto',
+                      textAlign: 'center',
+                      display: 'inline-flex',
+                      justifyContent: 'center',
+                      marginTop: 0,
+                      paddingTop: 0,
+                    }}
+                  >
+                    <img
+                      src={line}
+                      alt="line"
+                      style={{
+                        width: '80%',
+                        maxWidth: 'inherit',
+                      }}
+                    />
+                  </Box>
+                </Box>
               </m.span>
             </Grid>
 
@@ -77,6 +97,7 @@ export default function AboutFounder() {
                     color: '#fff',
                     fontSize: { xs: '1rem', md: '1.05rem' },
                     lineHeight: 1.6,
+                    textAlign: 'justify',
                   }}>
                   Zubair Raza Shah, the visionary behind MIM Transport Group, brings decades of diverse experience and an unwavering commitment to the trucking community. Having a background in economics, Zubair moved to the United States in 1994, where his entrepreneurial journey began. Starting in sales in bustling New York City, he honed his skills in connecting with people, understanding their needs, and solving problems for mutual wins. Over the years, he transitioned into managing retail and gas station businesses in Northern Virginia, eventually co-owning a home mortgage firm until 2007.
                 </Typography>
@@ -94,7 +115,8 @@ export default function AboutFounder() {
                         mb: 2,
                         color: '#fff',
                         fontSize: { xs: '1rem', md: '1.05rem' },
-                        lineHeight: 1.6,
+                        lineHeight: 1.8,
+                        textAlign: 'justify',
                       }}>
                       In 2010, Zubair's passion for transportation led him back to the trucking industry, where he found his true calling. By 2013, he had established MIM Transport Group, driven by a simple yet powerful vision: to create a family-like environment where owner-operators can thrive. His approach is built on honesty, straight talk, and fostering an interest-free, cash-based business model that enables drivers to earn an honest living.
                     </Typography>
@@ -104,7 +126,8 @@ export default function AboutFounder() {
                         mb: 2,
                         color: '#fff',
                         fontSize: { xs: '1rem', md: '1.05rem' },
-                        lineHeight: 1.6,
+                        lineHeight: 1.8,
+                        textAlign: 'justify',
                       }}>
                       Zubair's journey reflects his resilience and dedication to building a company that puts people first. His leadership ensures that MIM Transport Group remains a trusted partner for drivers, offering them the respect, support, and opportunities they deserve. Under his guidance, MIM Transport Group is more than just a trucking company—it's a community where drivers can succeed and feel at home.
                     </Typography>
@@ -118,27 +141,27 @@ export default function AboutFounder() {
                   <Box
                     sx={{
                       position: 'relative',
-                      height: '100%',
                       display: 'flex',
+                      justifyContent: 'center',
                       alignItems: 'center',
-                      py: 0,
                     }}
                   >
-                    <Image
-                      alt="Founder"
+                    <Box
+                      component="img"
                       src="/assets/images/about/founder.png"
+                      alt="Founder"
                       sx={{
                         width: '100%',
-                        height: '100%',
-                        borderRadius: 2,
+                        height: '26rem',
+                        borderRadius: '10px',
                         boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-                        boxShadow: 'none',
-                        shadow: 'none',
+                        objectFit: 'cover',
                       }}
                     />
                   </Box>
                 </m.div>
               </Grid>
+
             </Grid>
           </Grid>
         </Container>

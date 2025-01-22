@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import { m } from 'framer-motion';
 import { MotionViewport, varFade } from 'src/components/animate';
 
-export default function TakeCharge() {
+export default function ReadyToJoin() {
 
     return (
         <>
@@ -14,13 +14,12 @@ export default function TakeCharge() {
                 component={MotionViewport}
                 sx={{
                     display: 'flex',
-                    // minHeight: '100vh',
                     alignItems: 'center',
                     padding: {
                         xs: '13% 0',
                         lg: '4% 0',
                     },
-                    backgroundImage: `url(/assets/background/homebg.png)`,
+                    backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)), url(/assets/images/about/ppBanner.jpg)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',

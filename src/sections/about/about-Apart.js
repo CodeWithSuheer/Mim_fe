@@ -24,6 +24,7 @@ import { _testimonials } from 'src/_mock';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Image from 'src/components/image';
+import line from 'src/assets/landingPage/line.png';
 
 // ----------------------------------------------------------------------
 
@@ -76,9 +77,9 @@ export default function AboutApart() {
         flexDirection: 'column',
         justifyContent: 'center',
         padding: {
-          xs: '5% 0',
+          xs: '10% 0',
           lg: '4% 0',
-        },
+      },
         justifyContent: 'center',
         alignItems: 'center',
         backgroundImage: `url(/assets/images/about/apart.png)`,
@@ -90,30 +91,57 @@ export default function AboutApart() {
       <Container>
         <Box sx={{ mb: { xs: 4, md: 8 }, textAlign: 'center' }}>
           <m.div variants={varFade().inUp}>
-            <Typography
-              variant="h2"
-              align="center"
-              color={'#A70E16'}
+            <Grid
+              item
+              xs={12}
+              md={12}
+              px={2}
               sx={{
-                mt: { xs: 5, md: 0 },
-                fontSize: { xs: '2rem', md: '2.5rem' },
-                color: '#A70E16',
-                position: 'relative',
-                display: 'inline-block',
-                '&::after': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: '-8px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '100%',
-                  height: '3px',
-                  backgroundColor: '#B22222',
-                }
+                marginBottom: { xs: '0rem', md: '3rem' },
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             >
-              What Sets Us Apart
-            </Typography>
+              <m.span variants={varFade().inUp}>
+                <Box sx={{ display: 'inline-block', textAlign: 'center', margin: '0 auto' }}>
+                  <Typography
+                    variant="h2"
+                    fontWeight={700}
+                    sx={{
+                      color: '#A70E16',
+                      marginBottom: '-0.7rem',
+                    }}
+                  >
+                    What Sets Us Apart
+                  </Typography>
+
+                  <Box
+                    mt={0}
+                    pt={0}
+                    sx={{
+                      width: '100%',
+                      margin: '0 auto',
+                      textAlign: 'center',
+                      display: 'inline-flex',
+                      justifyContent: 'center',
+                      marginTop: 0,
+                      paddingTop: 0,
+                    }}
+                  >
+                    <img
+                      src={line}
+                      alt="line"
+                      style={{
+                        width: '80%',
+                        maxWidth: 'inherit',
+                      }}
+                    />
+                  </Box>
+                </Box>
+              </m.span>
+            </Grid>
+
           </m.div>
         </Box>
 
