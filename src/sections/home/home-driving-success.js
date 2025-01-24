@@ -11,28 +11,28 @@ import line from 'src/assets/landingPage/line.png'
 const drivingSuccessData = [
     {
         video: "/assets/video/dummy_video_1.mp4",
-        icons: '',
+        icon: '/assets/icons/driving-success/box.png',
         count: 500,
         suffix: "+",
         description: "Loads Delivered Monthly",
     },
     {
         video: "/assets/video/dummy_video_1.mp4",
-        icons: '',
+        icon: '/assets/icons/driving-success/stop-watch.png',
         count: 98,
         suffix: "%",
         description: "On-Time Delivery Rate",
     },
     {
         video: "/assets/video/dummy_video_1.mp4",
-        icons: '',
+        icon: '/assets/icons/driving-success/trophy.png',
         count: 25,
         suffix: "+",
         description: "Owner-Operator Business Members",
     },
     {
         video: "/assets/video/dummy_video_1.mp4",
-        icons: '',
+        icon: '/assets/icons/driving-success/add-user.png',
         count: 20,
         suffix: "+",
         description: "Years of Industry Expertise",
@@ -50,7 +50,7 @@ export default function DrivingSuccess() {
                     flexDirection: 'column',
                     padding: {
                         xs: '12% 0',
-                        lg: '5% 0',
+                        lg: '7% 0',
                     },
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -147,7 +147,17 @@ export default function DrivingSuccess() {
                                         }}
                                     />
                                 </Box>
-                                <CardContent sx={{ py: 1 }}>
+                                <CardContent sx={{ pt: 1 }}>
+                                    <Box
+                                        component="img"
+                                        src={item.icon}
+                                        alt={item.count}
+                                        sx={{
+                                            width: "40px",
+                                            height: "40px",
+                                            marginBottom: "0.5rem",
+                                        }}
+                                    />
                                     <Typography
                                         variant="h3"
                                         sx={{ fontWeight: "bold", mb: 0, color: "#000000" }}
