@@ -78,7 +78,7 @@ const authAmplify = {
 };
 
 const authJwt = {
-  path: 'jwt',
+  path: '',
   element: (
     <GuestGuard>
       <Suspense fallback={<SplashScreen />}>
@@ -185,7 +185,7 @@ const authAuth0 = {
 
 export const authRoutes = [
   {
-    path: 'auth',
+    path: '',
     children: [authAmplify, authJwt, authFirebase, authAuth0],
   },
 ];

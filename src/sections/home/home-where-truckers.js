@@ -6,7 +6,7 @@ import { m } from 'framer-motion';
 import { MotionViewport, varFade } from 'src/components/animate';
 import line from 'src/assets/landingPage/line.png'
 
-export default function OurMission() {
+export default function WhereTruckers() {
 
     return (
         <>
@@ -127,8 +127,8 @@ export default function OurMission() {
                                     }}
                                 >
                                     <img
-                                        src={'/assets/background/truck_1.jpg'}
-                                        alt="OurMissionImage"
+                                        src={'/assets/trucks/truck01.jpg'}
+                                        alt="image"
                                         style={{
                                             width: '30rem',
                                             height: 'auto',
@@ -217,7 +217,7 @@ export default function OurMission() {
                                 >
                                     <img
                                         src={'/assets/background/truck_2.jpg'}
-                                        alt="OurMissionImage"
+                                        alt="image"
                                         style={{
                                             width: '30rem',
                                             height: 'auto',
@@ -305,8 +305,8 @@ export default function OurMission() {
                                     }}
                                 >
                                     <img
-                                        src={'/assets/background/truck_3.jpg'}
-                                        alt="OurMissionImage"
+                                        src={'/assets/trucks/truck03.jpg'}
+                                        alt="image"
                                         style={{
                                             width: '30rem',
                                             height: 'auto',
@@ -395,7 +395,7 @@ export default function OurMission() {
                                 >
                                     <img
                                         src={'/assets/background/truck_4.jpg'}
-                                        alt="OurMissionImage"
+                                        alt="image"
                                         style={{
                                             width: '30rem',
                                             height: 'auto',

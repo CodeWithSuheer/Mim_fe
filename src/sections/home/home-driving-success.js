@@ -11,31 +11,35 @@ import line from 'src/assets/landingPage/line.png'
 const drivingSuccessData = [
     {
         video: "/assets/video/dummy_video_1.mp4",
+        icons: '',
         count: 500,
         suffix: "+",
         description: "Loads Delivered Monthly",
     },
     {
         video: "/assets/video/dummy_video_1.mp4",
+        icons: '',
         count: 98,
         suffix: "%",
         description: "On-Time Delivery Rate",
     },
     {
         video: "/assets/video/dummy_video_1.mp4",
+        icons: '',
         count: 25,
         suffix: "+",
         description: "Owner-Operator Business Members",
     },
     {
         video: "/assets/video/dummy_video_1.mp4",
+        icons: '',
         count: 20,
         suffix: "+",
         description: "Years of Industry Expertise",
     },
 ];
 
-export default function TakeCharge() {
+export default function DrivingSuccess() {
 
     return (
         <>
@@ -46,7 +50,7 @@ export default function TakeCharge() {
                     flexDirection: 'column',
                     padding: {
                         xs: '12% 0',
-                        lg: '3% 0',
+                        lg: '5% 0',
                     },
                     justifyContent: 'center',
                     alignItems: 'center',

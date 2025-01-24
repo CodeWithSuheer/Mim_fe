@@ -284,9 +284,8 @@ export default function Footer() {
                 }}
               >
                 {[
-                  { href: '/', icon: 'ri:twitter-x-fill' },
-                  { href: '/', icon: 'mdi:instagram' },
                   { href: '/', icon: 'ic:outline-facebook' },
+                  { href: '/', icon: 'mdi:instagram' },
                   { href: '/', icon: 'mdi:linkedin' },
                 ].map(({ href, icon }, index) => (
                   <IconButton key={index} sx={{ mr: 1 }}>

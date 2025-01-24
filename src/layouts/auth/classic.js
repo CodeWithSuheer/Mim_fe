@@ -58,6 +58,8 @@ export default function AuthClassicLayout({ children, image, title }) {
     <Logo
       sx={{
         zIndex: 9,
+        width: { xs: 100, md: 110 },
+        height: { xs: 70, md: 90 },
         position: 'absolute',
         m: { xs: 2, md: 5 },
       }}
@@ -95,10 +97,6 @@ export default function AuthClassicLayout({ children, image, title }) {
         }),
       }}
     >
-      <Typography variant="h3" sx={{ maxWidth: 480, textAlign: 'center' }}>
-        {title || 'Hi, Welcome back'}
-      </Typography>
-
       <Box
         component="img"
         alt="auth"
@@ -112,7 +110,7 @@ export default function AuthClassicLayout({ children, image, title }) {
         }}
       />
 
-      <Stack direction="row" spacing={2}>
+      {/* <Stack direction="row" spacing={2}>
         {METHODS.map((option) => (
           <Tooltip key={option.label} title={option.label}>
             <Link component={RouterLink} href={option.path}>
@@ -131,7 +129,7 @@ export default function AuthClassicLayout({ children, image, title }) {
             </Link>
           </Tooltip>
         ))}
-      </Stack>
+      </Stack> */}
     </Stack>
   );
 

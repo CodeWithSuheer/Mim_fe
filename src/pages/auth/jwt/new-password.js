@@ -8,7 +8,7 @@ export default function ClassicNewPasswordPage() {
   return (
     <>
       <Helmet>
-        <title> Auth Classic: New Password</title>
+        <title> New Password</title>
       </Helmet>
 
       <JwtNewPasswordView />

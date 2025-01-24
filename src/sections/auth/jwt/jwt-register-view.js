@@ -24,7 +24,7 @@ import { useAuthContext } from 'src/auth/hooks';
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { useRegisterMutation } from "../../../store/Reducer/auth";
-import {toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 // ----------------------------------------------------------------------
@@ -32,7 +32,7 @@ import {toast } from 'react-toastify';
 export default function JwtRegisterView() {
   const { register } = useAuthContext();
   const [registerData, { data, error, isLoading }] =
-  useRegisterMutation();
+    useRegisterMutation();
   const router = useRouter();
 
   const [errorMsg, setErrorMsg] = useState('');
@@ -90,7 +90,7 @@ export default function JwtRegisterView() {
       <Stack direction="row" spacing={0.5}>
         <Typography variant="body2"> Already have an account? </Typography>
 
-        <Link href={paths.auth.jwt.login} component={RouterLink} variant="subtitle2">
+        <Link component={RouterLink} href={'/login'} variant="subtitle2" color="#A70E16">
           Sign in
         </Link>
       </Stack>

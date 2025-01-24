@@ -10,7 +10,7 @@ import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
-import { FormControlLabel,Radio, } from '@mui/material';
+import { FormControlLabel, Radio, } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import { Controller } from 'react-hook-form';
 import FormLabel from '@mui/material/FormLabel';
@@ -23,7 +23,7 @@ import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
 import { useSearchParams, useRouter } from 'src/routes/hooks';
 // config
-import { PATH_AFTER_LOGIN,PATH_AFTER_SUPERADMIN_LOGIN,PATH_AFTER_ADMIN_LOGIN, FORGOT_PASSWORD } from 'src/config-global';
+import { PATH_AFTER_LOGIN, PATH_AFTER_SUPERADMIN_LOGIN, PATH_AFTER_ADMIN_LOGIN, FORGOT_PASSWORD } from 'src/config-global';
 // hooks
 import { useBoolean } from 'src/hooks/use-boolean';
 // auth
@@ -32,7 +32,7 @@ import { useAuthContext } from 'src/auth/hooks';
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { useLoginMutation } from "../../../store/Reducer/auth";
-import {toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../store/slices/userSlice'
 
@@ -43,7 +43,7 @@ export default function JwtLoginView() {
 
 
   const [loginData] =
-  useLoginMutation();
+    useLoginMutation();
 
   const router = useRouter();
 
@@ -93,8 +93,8 @@ export default function JwtLoginView() {
   }
   const onSubmit = handleSubmit(async (data) => {
     try {
-      const UserData =await loginData(data).unwrap();
-      let user=UserData.body
+      const UserData = await loginData(data).unwrap();
+      let user = UserData.body
       dispatch(setUser(user));
       goTo(user?.role);
     } catch (error) {
@@ -104,19 +104,15 @@ export default function JwtLoginView() {
       setErrorMsg(typeof error === 'string' ? error : error.message);
     }
   });
-  
-
-  
-  
 
   const renderHead = (
     <Stack spacing={2} sx={{ mb: 5 }}>
-      <Typography variant="h4">Sign in to Minimal</Typography>
+      <Typography variant="h4">Sign in to MIM Transport</Typography>
 
       <Stack direction="row" spacing={0.5}>
         <Typography variant="body2">New user?</Typography>
 
-        <Link component={RouterLink} href={paths.auth.jwt.register} variant="subtitle2">
+        <Link component={RouterLink} href={'/register'} variant="subtitle2" color="#A70E16">
           Create an account
         </Link>
       </Stack>
@@ -144,7 +140,7 @@ export default function JwtLoginView() {
         }}
       />
 
- {/* <FormControl component="fieldset">
+      {/* <FormControl component="fieldset">
         <FormLabel component="legend">User Type</FormLabel>
         <Controller
           name="user_type"
@@ -163,7 +159,7 @@ export default function JwtLoginView() {
         />
       </FormControl> */}
 
-      <Link onClick={()=>router.push(FORGOT_PASSWORD)} variant="body2" color="inherit" underline="always" sx={{ alignSelf: 'flex-end',cursor:'pointer' }}>
+      <Link onClick={() => router.push(FORGOT_PASSWORD)} variant="body2" color="inherit" underline="always" sx={{ alignSelf: 'flex-end', cursor: 'pointer' }}>
         Forgot password?
       </Link>
 
@@ -183,7 +179,7 @@ export default function JwtLoginView() {
   return (
     <FormProvider methods={methods} onSubmit={onSubmit}>
       {renderHead}
-{/* 
+      {/* 
       <Alert severity="info" sx={{ mb: 3 }}>
         Use email : <strong>demo@minimals.cc</strong> / password :<strong> demo1234</strong>
       </Alert> */}

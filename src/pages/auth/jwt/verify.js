@@ -8,7 +8,7 @@ export default function ClassicVerifyPage() {
   return (
     <>
       <Helmet>
-        <title> Auth Classic: Verify</title>
+        <title> Verify</title>
       </Helmet>
 
       <JwtVerifyPasswordView />
