@@ -17,7 +17,7 @@ export default function NavItem({ item, open, active, externalLink, ...other }) 
 
   const renderContent = (
     <ListItem active={active} {...other}>
-      <ListItemIcon> {icon} </ListItemIcon>
+      {/* <ListItemIcon> {icon} </ListItemIcon> */}
 
       <ListItemText disableTypography primary={title} />
 

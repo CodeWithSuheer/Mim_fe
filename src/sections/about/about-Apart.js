@@ -54,13 +54,13 @@ const FEATURES = [
   },
   {
     title: 'Growth Opportunities',
-    description: "MIM Transport Group truly understands that its growth lies in the well-being and consistent growth of its owner-operators that's why we keep no stone unturned in making sure our owner-operators are always getting steady and consistent freight.",
+    description: "MIM Transport Group thrives by ensuring the well-being and steady growth of its owner-operators, providing consistent freight without compromise.",
     image: '/assets/images/about/card_02.png'
 
   },
   {
     title: 'Recognition and respect',
-    description: "Recognition and Respect are the foundation of all of our dealings at MIM Transport Group, after-all that's the foremost thing a hardworking owner-operator deserves for the hard work they do every day.",
+    description: "At MIM Transport Group, recognition and respect are the core of our values—what every hardworking owner-operator truly deserves.",
     image: '/assets/images/about/card_03.png'
 
   }

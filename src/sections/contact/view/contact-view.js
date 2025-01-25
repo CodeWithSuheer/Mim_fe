@@ -23,7 +23,6 @@ export default function ContactView() {
 
       <Container sx={{ py: 10 }}>
         <ContactForm />
-        {/* <ContactMap contacts={_mapContact} /> */}
       </Container>
     </>
   );
