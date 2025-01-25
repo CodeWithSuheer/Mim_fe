@@ -262,7 +262,7 @@ export default function Footer() {
                         <Link
                           key={social.name}
                           href={social.href}
-                          target="_blank"
+                          // target="_blank"
                           rel="noopener"
                           color="inherit"
                           variant="body2"
@@ -291,7 +291,6 @@ export default function Footer() {
                   <IconButton key={index} sx={{ mr: 1 }}>
                     <Link
                       href={href}
-                      target="_blank"
                       rel="noopener"
                       underline="none"
                     >

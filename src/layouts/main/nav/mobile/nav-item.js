@@ -19,7 +19,7 @@ export default function NavItem({ item, open, active, externalLink, ...other }) 
     <ListItem active={active} {...other}>
       {/* <ListItemIcon> {icon} </ListItemIcon> */}
 
-      <ListItemText disableTypography primary={title} />
+      <ListItemText disableTypography primary={title} sx={{ color: '#000000' }} />
 
       {!!children && (
         <Iconify
