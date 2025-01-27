@@ -4,8 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Slider from "react-slick";
-import { m, motion } from 'framer-motion';
-import { MotionViewport, varFade } from 'src/components/animate';
+import { varFade } from 'src/components/animate';
 import { Button } from '@mui/material';
 import { useResponsive } from 'src/hooks/use-responsive';
 

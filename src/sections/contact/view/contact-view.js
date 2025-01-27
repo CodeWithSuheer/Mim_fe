@@ -18,9 +18,7 @@ export default function ContactView() {
   return (
     <>
       <ScrollProgress scrollYProgress={scrollYProgress} />
-
       <ContactHero />
-
       <Container sx={{ py: 10 }}>
         <ContactForm />
       </Container>

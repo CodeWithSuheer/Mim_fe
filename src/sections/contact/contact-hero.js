@@ -49,6 +49,7 @@ export default function ContactHero() {
         }),
         height: { md: 560 },
         py: { xs: 10, md: 0 },
+        mt: { md: '-5rem' },
         overflow: 'hidden',
         position: 'relative',
         backgroundSize: 'cover',
