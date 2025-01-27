@@ -12,42 +12,42 @@ import { _mock } from 'src/_mock';
 const testimonialsData = [
     {
         name: "James Pattinson",
-        image: "/assets/images/testimonials/james.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img06.png?v=1737191604",
         rating: 5,
         feedback:
             "A game changer for my business! Their expertise streamlined my operations. Highly recommend!",
     },
     {
         name: "Greg Stuart",
-        image: "/assets/images/testimonials/greg.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img04.png?v=1737191604",
         rating: 5,
         feedback:
             "Impressive service and support! Always available to help and provided valuable insights.",
     },
     {
         name: "Trevor Mitchell",
-        image: "/assets/images/testimonials/trevor.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img07.png?v=1738005936",
         rating: 5,
         feedback:
             "User-friendly platform that simplifies logistics. I can focus on my business while they handle the rest!",
     },
     {
         name: "Emily Johnson",
-        image: "/assets/images/testimonials/emily.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img04.png?v=1737191604",
         rating: 5,
         feedback:
             "Outstanding service! The team is professional and truly cares about their clients. My delivery times improved significantly.",
     },
     {
         name: "Michael Brown",
-        image: "/assets/images/testimonials/michael.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img08.png?v=1738005936",
         rating: 5,
         feedback:
             "Personalized attention that understands my needs. A fantastic partnership!",
     },
     {
         name: "Sarah Davis",
-        image: "/assets/images/testimonials/sarah.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img04.png?v=1737191604",
         rating: 5,
         feedback:
             "Quality service! I've seen a noticeable improvement in delivery rates and customer satisfaction.",
