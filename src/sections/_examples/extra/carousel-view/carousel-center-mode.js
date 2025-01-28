@@ -75,7 +75,7 @@ export default function CarouselCenterMode({ data }) {
                 variant="outlined"
                 sx={{
                   minHeight: "260px",
-                  minHeight: "19rem",
+                  minHeight: "20rem",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",

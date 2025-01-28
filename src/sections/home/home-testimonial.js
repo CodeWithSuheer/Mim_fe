@@ -36,7 +36,7 @@ const testimonialsData = [
         image: "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/img04.png?v=1737191604",
         rating: 5,
         feedback:
-            "Outstanding service! The team is professional and truly cares about their clients. My delivery times improved significantly.",
+            "Outstanding service! The team is professional and truly cares about their clients.",
     },
     {
         name: "Michael Brown",

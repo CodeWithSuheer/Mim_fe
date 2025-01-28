@@ -19,7 +19,7 @@ export default function ReadyToJoin() {
                         xs: '13% 0',
                         lg: '4% 0',
                     },
-                    backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)), url(/assets/images/about/ppBanner.jpg)`,
+                    backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)), url(/assets/background/readyToBg.png)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -35,20 +35,24 @@ export default function ReadyToJoin() {
                             xs: '0% 0 5% 0',
                         },
                         paddingLeft: { xs: '5%', md: '10%' },
+                        paddingRight: { xs: '5%', md: '10%' },
                     }}
                     width="100%"
                     alignItems="flex-start"
-                    justifyContent="flex-start"
+                    justifyContent="flex-end"
                 >
 
                     <Grid
                         item
                         xs={11}
-                        md={11}
+                        md={8}
                         width="100%"
                         display={'grid'}
-                        justifyContent={'start'}
+                        justifyContent={'end'}
                         alignItems={'flex-start'}
+                        sx={{
+                            pr: { xs: 2, md: 4 }, // Additional padding for the content block
+                        }}
                     >
                         <m.span variants={varFade().inUp}>
                             <Typography

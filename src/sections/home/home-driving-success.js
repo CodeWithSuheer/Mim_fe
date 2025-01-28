@@ -8,30 +8,31 @@ import { m } from 'framer-motion';
 import { MotionViewport, varFade } from 'src/components/animate';
 import line from 'src/assets/landingPage/line.png'
 
+
 const drivingSuccessData = [
     {
-        video: "/assets/video/dummy_video_1.mp4",
+        video: "https://youtu.be/OYQkPUu5diM",
         icon: '/assets/icons/driving-success/box.png',
         count: 500,
         suffix: "+",
         description: "Loads Delivered Monthly",
     },
     {
-        video: "/assets/video/dummy_video_1.mp4",
+        video: "https://youtu.be/jJv08b2b6iY",
         icon: '/assets/icons/driving-success/stop-watch.png',
         count: 98,
         suffix: "%",
         description: "On-Time Delivery Rate",
     },
     {
-        video: "/assets/video/dummy_video_1.mp4",
+        video: "https://youtu.be/YI747maCGEI",
         icon: '/assets/icons/driving-success/trophy.png',
         count: 25,
         suffix: "+",
         description: "Owner-Operator Business Members",
     },
     {
-        video: "/assets/video/dummy_video_1.mp4",
+        video: "https://youtu.be/ow5SS_NQrmA",
         icon: '/assets/icons/driving-success/add-user.png',
         count: 20,
         suffix: "+",
@@ -125,6 +126,10 @@ export default function DrivingSuccess() {
                                     textAlign: "center",
                                     boxShadow: "none",
                                     borderRadius: "22px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "space-between",
+                                    height: "330px", // Fixed height for all cards
                                 }}
                             >
                                 <Box
@@ -134,18 +139,18 @@ export default function DrivingSuccess() {
                                         overflow: "hidden",
                                         borderTopLeftRadius: "20px",
                                         borderTopRightRadius: "20px",
+                                        height: "50%", // Ensures the video section is consistent
                                     }}
                                 >
-                                    <video
-                                        src={item.video}
-                                        controls
-                                        autoPlay
-                                        muted
-                                        style={{
-                                            width: "100%",
-                                            // borderRadius: "20px",
-                                        }}
-                                    />
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src={`${item.video.replace("youtu.be", "www.youtube.com/embed")}?autoplay=1&mute=1`}
+                                        title="YouTube video player"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
                                 </Box>
                                 <CardContent sx={{ pt: 1 }}>
                                     <Box
